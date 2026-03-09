@@ -2,13 +2,17 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { NavItem } from "./config/navigation";
+import { NavItem } from "../../config/navigation";
+import { getLocale } from "../../lib/getLocale";
 
 interface HeaderProps {
   items: NavItem[];
+  locale: string;
 }
 
-export default function Header({ items }: HeaderProps) {
+export default function Header({ items, locale }: HeaderProps) {
+  const lang = getLocale(locale);
+  const nextLocale = locale === "en" ? "de" : "en";
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -24,13 +28,17 @@ export default function Header({ items }: HeaderProps) {
           {items.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={`/${locale}${item.href}`}
               className="hover:text-cyan-400 transition-colors duration-300"
             >
-              {item.label}
+              {lang.nav[item.id as keyof typeof lang.nav]}
             </Link>
           ))}
         </nav>
+
+        <Link href={`/${nextLocale}`} className="border px-3 py-1 rounded">
+          {locale.toUpperCase()}
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
@@ -47,11 +55,11 @@ export default function Header({ items }: HeaderProps) {
           {items.map((item) => (
             <Link
               key={item.href}
-              href={item.href}
+              href={`/${locale}${item.href}`}
               onClick={() => setIsOpen(false)}
               className="hover:text-cyan-400 transition"
             >
-              {item.label}
+              {lang.nav[item.id as keyof typeof lang.nav]}
             </Link>
           ))}
         </div>

@@ -1,10 +1,10 @@
 export interface NavItem {
-  label: string;
+  id: string;
   href: string;
 }
 
 export const navItems: NavItem[] = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
+  { id: "home", href: "#home" },
+  { id: "about", href: "#about" },
+  { id: "skills", href: "#skills" },
 ];
