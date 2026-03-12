@@ -1,34 +1,21 @@
 "use client";
-
 import { useState } from "react";
 
-interface CoreRatingProps {
-  max?: number;
-  defaultValue?: number;
-}
-
-export default function CoreRating({
-  max = 5,
-  defaultValue = 0,
-}: CoreRatingProps) {
-  const [rating, setRating] = useState(defaultValue);
-  const [hover, setHover] = useState<number | null>(null);
+export default function CoreRating({ max = 5 }) {
+  const [rating, setRating] = useState(0);
 
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex gap-1">
       {[...Array(max)].map((_, index) => {
         const value = index + 1;
 
         return (
           <button
             key={value}
-            type="button"
             onClick={() => setRating(value)}
-            onMouseEnter={() => setHover(value)}
-            onMouseLeave={() => setHover(null)}
-            className="text-2xl transition-transform hover:scale-110"
+            className="text-2xl"
           >
-            {value <= (hover ?? rating) ? "★" : "☆"}
+            {value <= rating ? "★" : "☆"}
           </button>
         );
       })}
