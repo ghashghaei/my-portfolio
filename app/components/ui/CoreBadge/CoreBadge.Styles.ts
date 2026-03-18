@@ -4,7 +4,7 @@ export type BadgeVariant = "primary" | "secondary" | "success" | "outline";
 
 export type IconPosition = "left" | "right";
 
-export type Rounded = "none" | "md" | "full";
+export type BadgeRounded = "none" | "md" | "full";
 
 export const baseStyle =
   "inline-flex items-center gap-1 transition-all duration-200";
@@ -22,7 +22,7 @@ export const variants: Record<BadgeVariant, string> = {
   outline: "border border-gray-400 text-gray-700 bg-transparent",
 };
 
-export const roundedStyles: Record<Rounded, string> = {
+export const roundedStyles: Record<BadgeRounded, string> = {
   none: "rounded-none",
   md: "rounded-md",
   full: "rounded-full",

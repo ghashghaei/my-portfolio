@@ -7,7 +7,7 @@ import {
   roundedStyles,
   BadgeSize,
   BadgeVariant,
-  Rounded,
+  BadgeRounded,
   IconPosition,
 } from "./CoreBadge.Styles";
 
@@ -15,7 +15,7 @@ type CoreBadgeProps = {
   label: string;
   size?: BadgeSize;
   variant?: BadgeVariant;
-  rounded?: Rounded;
+  rounded?: BadgeRounded;
   icon?: React.ReactNode;
   iconPosition?: IconPosition;
 };
