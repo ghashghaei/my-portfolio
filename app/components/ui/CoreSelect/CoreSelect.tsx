@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import {
   containerStyle,
   buttonBase,
@@ -41,9 +42,14 @@ export default function CoreDropdown({
       {open && (
         <div className={menuStyle}>
           {items.map((item) => (
-            <div key={item.value} className={itemStyle}>
+            <Link
+              key={item.value}
+              href={item.value}
+              className={`${itemStyle} block w-full`}
+              onClick={() => setOpen(false)}
+            >
               {item.label}
-            </div>
+            </Link>
           ))}
         </div>
       )}

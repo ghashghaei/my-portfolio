@@ -8,7 +8,7 @@ export const buttonBase =
 export const menuStyle =
   "absolute left-0 w-full border rounded-md shadow-md z-20";
 
-export const itemStyle = "px-4 py-2 cursor-pointer hover:bg-gray-100";
+export const itemStyle = "px-4 py-2 cursor-pointer hover:bg-gray-500";
 
 export const sizes: Record<DropdownSize, string> = {
   sm: "w-32 px-2 py-1 ",
