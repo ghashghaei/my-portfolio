@@ -1,5 +1,8 @@
 import { getLocale } from "../../lib/getLocale";
 import Image from "next/image";
+import CoreButton from "../ui/CoreButton/CoreButton";
+import CoreTooltip from "../ui/CoreTooltip/CoreTooltip";
+import { contactItems } from "../../config/contact";
 
 type Props = {
   locale: string;
@@ -7,6 +10,20 @@ type Props = {
 
 export default function AboutSection({ locale }: Props) {
   const lang = getLocale(locale);
+  const contactContent = (
+    <div className="flex flex-col gap-2 text-sm">
+      {contactItems.map((item) => (
+        <a
+          key={item.label}
+          href={item.href}
+          target="_blank"
+          className="hover:text-cyan-400"
+        >
+          {item.label}: {item.value}
+        </a>
+      ))}
+    </div>
+  );
 
   return (
     <div className="flex flex-col md:flex-row items-center gap-10">
@@ -16,6 +33,7 @@ export default function AboutSection({ locale }: Props) {
           src="/profile.jpg"
           alt="profile"
           fill
+          sizes="(max-width: 768px) 160px, 160px"
           className="rounded-full object-cover border-4 border-cyan-400"
         />
       </div>
@@ -31,9 +49,11 @@ export default function AboutSection({ locale }: Props) {
         </p>
 
         <div className="mt-6">
-          <button className="bg-cyan-500 px-5 py-2 rounded-md hover:bg-cyan-400 transition">
-            {lang.about.contact}
-          </button>
+          <CoreTooltip text={contactContent}>
+            <CoreButton variant="primary" size="md">
+              {lang.about.contact}
+            </CoreButton>
+          </CoreTooltip>
         </div>
       </div>
     </div>

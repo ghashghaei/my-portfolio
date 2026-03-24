@@ -8,7 +8,7 @@ import {
 } from "./CoreTooltip.Styles";
 
 type CoreTooltipProps = {
-  text: string;
+  text: React.ReactNode;
   position?: TooltipPosition;
   children: React.ReactNode;
 };
