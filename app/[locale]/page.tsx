@@ -1,11 +1,8 @@
 import { sections } from "../config/section";
 import { getLocale } from "../lib/getLocale";
-import CoreRating from "../components/ui/CoreRating/CoreRating";
-import CoreBadge from "../components/ui/CoreBadge/CoreBadge";
-import CoreAccordion from "../components/ui/CoreAccordion/CoreAccordion";
-import CoreTooltip from "../components/ui/CoreTooltip/CoreTooltip";
-import CoreDropdown from "../components/ui/CoreSelect/CoreSelect";
 import AboutSection from "../components/sections/AboutSection";
+import SkillsSection from "../components/sections/SkillsSection";
+import ExperienceSection from "../components/sections/ExperienceSection";
 
 interface PageProps {
   params: Promise<{
@@ -23,12 +20,14 @@ export default async function HomePage({ params }: PageProps) {
         <section
           key={section.id}
           id={section.id}
-          className="min-h-screen flex flex-col gap-10"
+          className="min-h-auto flex flex-col mb-24"
         >
           <h2 className="text-4xl font-bold mb-6">
             {lang.sections[section.id as keyof typeof lang.sections]}
           </h2>
           {section.id === "about" && <AboutSection locale={locale} />}
+          {section.id === "skills" && <SkillsSection />}
+          {section.id === "experience" && <ExperienceSection locale={locale} />}
         </section>
       ))}
     </div>
