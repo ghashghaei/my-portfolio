@@ -3,7 +3,7 @@ export interface Section {
 }
 
 export const sections: Section[] = [
-  { id: "home" },
   { id: "about" },
   { id: "skills" },
+  { id: "experience" },
 ];
