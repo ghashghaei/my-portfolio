@@ -6,9 +6,9 @@ export const en = {
   },
 
   sections: {
-    home: "Home",
     about: "About",
     skills: "Skills",
+    experiences: "Experiences",
   },
   about: {
     name: "Maryam Ghashghaei",
@@ -20,23 +20,39 @@ export const en = {
   experience: [
     {
       id: "company1",
-      company: "Tech Corp",
+      company: "Six Offene Systeme GmbH",
+      role: "Frontend Engineer",
+      date: "2024 - Present",
+      description: "Fast growing startup.",
+      tasks: ["Built reusable components", "Worked with designers"],
+    },
+    {
+      id: "company2",
+      company: "HEPSTER",
+      role: "Frontend Engineer",
+      date: "2021 - 2023",
+      description: "Fast growing startup.",
+      tasks: ["Built reusable components", "Worked with designers"],
+    },
+    {
+      id: "company3",
+      company: "BELVINI",
+      role: "Frontend Engineer",
+      date: "2020 - 2021",
+      description: "Fast growing startup.",
+      tasks: ["Built reusable components", "Worked with designers"],
+    },
+    {
+      id: "company4",
+      company: "SON Corporate Group",
       role: "Frontend Developer",
-      date: "2022 - Present",
+      date: "2017 - 2020",
       description: "A company focused on scalable web applications.",
       tasks: [
         "Developed responsive UI with React",
         "Worked with TypeScript and APIs",
         "Improved performance",
       ],
-    },
-    {
-      id: "company2",
-      company: "Startup X",
-      role: "Frontend Engineer",
-      date: "2020 - 2022",
-      description: "Fast growing startup.",
-      tasks: ["Built reusable components", "Worked with designers"],
     },
   ],
 };
