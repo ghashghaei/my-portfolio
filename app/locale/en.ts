@@ -23,7 +23,7 @@ export const en = {
       company: "Six Offene Systeme GmbH",
       role: "Frontend Engineer",
       date: "2024 - Present",
-      description: "Fast growing startup.",
+      description: "A company focused on scalable web applications.",
       tasks: ["Built reusable components", "Worked with designers"],
     },
     {

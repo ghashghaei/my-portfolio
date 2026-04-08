@@ -23,7 +23,7 @@ export const de = {
       company: "Six Offene Systeme GmbH",
       role: "Frontend Entwickler",
       date: "2024 - Aktuell",
-      description: "Unternehmen für Webanwendungen.",
+      description: "Ein Unternehmen mit Fokus auf skalierbare Webanwendungen.",
       tasks: ["UI mit React entwickelt", "Mit APIs gearbeitet"],
     },
     {
