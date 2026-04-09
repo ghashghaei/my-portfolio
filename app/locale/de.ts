@@ -32,7 +32,7 @@ export const de = {
       role: "Frontend Entwickler",
       date: "2021 - 2023",
       description: "Unternehmen für Webanwendungen.",
-      tasks: ["UI mit React entwickelt", "Mit APIs gearbeitet"],
+      tasks: ["UI mit Vue.js entwickelt", "Mit APIs gearbeitet"],
     },
     {
       id: "company3",
@@ -40,7 +40,7 @@ export const de = {
       role: "Frontend Entwickler",
       date: "2020 - 2021",
       description: "Unternehmen für Webanwendungen.",
-      tasks: ["UI mit React entwickelt", "Mit APIs gearbeitet"],
+      tasks: ["UI mit Vue.js entwickelt", "Mit APIs gearbeitet"],
     },
     {
       id: "company4",
@@ -48,7 +48,7 @@ export const de = {
       role: "Frontend Entwickler",
       date: "2017 - 2020",
       description: "Unternehmen für Webanwendungen.",
-      tasks: ["UI mit React entwickelt", "Mit APIs gearbeitet"],
+      tasks: ["UI mit Angular entwickelt", "Mit APIs gearbeitet"],
     },
   ],
 };

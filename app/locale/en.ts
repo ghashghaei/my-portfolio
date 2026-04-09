@@ -24,7 +24,10 @@ export const en = {
       role: "Frontend Engineer",
       date: "2024 - Present",
       description: "A company focused on scalable web applications.",
-      tasks: ["Built reusable components", "Worked with designers"],
+      tasks: [
+        "Built reusable components",
+        "implemented performance optimizations",
+      ],
     },
     {
       id: "company2",
@@ -40,7 +43,7 @@ export const en = {
       role: "Frontend Engineer",
       date: "2020 - 2021",
       description: "Fast growing startup.",
-      tasks: ["Built reusable components", "Worked with designers"],
+      tasks: ["Designed a modular client dashboard ", "Worked with designers"],
     },
     {
       id: "company4",
