@@ -10,45 +10,68 @@ export const de = {
     skills: "Fähigkeiten",
     experiences: "Erfahrungen",
   },
+
   about: {
     name: "Maryam Ghashghaei",
     role: "Frontend Entwickler",
     description:
-      "Erfahrene Frontend Entwicklerin mit über 5 Jahren Berufserfahrung in der Entwicklung skalierbarer Webanwendungen mit React und TypeScript. Fundierte Kenntnisse in SPA-Architektur, REST-API-Integration, komponentenbasierter Entwicklung sowie Performance-Optimierung. Mehrfach erfolgreiche Implementierung produktiver Anwendungen im InsurTech- und E-Commerce-Umfeld mit messbaren Verbesserungen in Stabilität, Benutzererfahrung und Conversion-Rate.",
+      "Frontend Entwickler mit über 5 Jahren Erfahrung in der Entwicklung skalierbarer und performanter Webanwendungen. Erfahrung mit React, Vue.js und TypeScript sowie starkem Fokus auf komponentenbasierte Architektur, REST-API-Integration und responsives Design. Nachweisbare Verbesserungen in Performance, Barrierefreiheit (WCAG) und User Experience in Insurtech- und E-Commerce-Projekten.",
     contact: "Kontakt",
   },
+
   experience: [
     {
       id: "company1",
       company: "Six Offene Systeme GmbH",
       role: "Frontend Entwickler",
       date: "2024 - Aktuell",
-      description: "Ein Unternehmen mit Fokus auf skalierbare Webanwendungen.",
-      tasks: ["UI mit React entwickelt", "Mit APIs gearbeitet"],
+      description: "Entwicklung skalierbarer, datengetriebener Webanwendungen.",
+      tasks: [
+        "Entwicklung moderner Frontends mit Vue.js",
+        "Aufbau wiederverwendbarer komponentenbasierter UI-Architektur",
+        "Integration von REST APIs in Frontend-Systeme",
+        "Zusammenarbeit mit Backend- und Design-Teams",
+        "Optimierung der Performance für datenintensive Anwendungen",
+      ],
     },
     {
       id: "company2",
       company: "HEPSTER",
       role: "Frontend Entwickler",
       date: "2021 - 2023",
-      description: "Unternehmen für Webanwendungen.",
-      tasks: ["UI mit Vue.js entwickelt", "Mit APIs gearbeitet"],
+      description: "Insurtech-Startup für digitale Versicherungsprodukte.",
+      tasks: [
+        "Entwicklung skalierbarer Frontend-Anwendungen",
+        "Aufbau und Pflege eines Design Systems mit Storybook",
+        "Umsetzung pixelgenauer responsiver Benutzeroberflächen",
+        "Performance-Optimierung mit Lighthouse und Lazy Loading",
+        "Verbesserung der Barrierefreiheit gemäß WCAG",
+        "Zusammenarbeit mit UX/UI-Designern und Backend-Teams",
+      ],
     },
     {
       id: "company3",
       company: "BELVINI",
       role: "Frontend Entwickler",
       date: "2020 - 2021",
-      description: "Unternehmen für Webanwendungen.",
-      tasks: ["UI mit Vue.js entwickelt", "Mit APIs gearbeitet"],
+      description: "E-Commerce-Plattform für Weinhandel.",
+      tasks: [
+        "Entwicklung und Optimierung des E-Commerce-Frontends",
+        "Umsetzung responsiver, geräteübergreifender UI",
+        "Verbesserung von User Flows und Conversion-Rate",
+      ],
     },
     {
       id: "company4",
       company: "SON Corporate Group",
       role: "Frontend Entwickler",
       date: "2017 - 2020",
-      description: "Unternehmen für Webanwendungen.",
-      tasks: ["UI mit Angular entwickelt", "Mit APIs gearbeitet"],
+      description: "Entwicklung interner Webanwendungen.",
+      tasks: [
+        "Entwicklung interner Webanwendungen",
+        "Verbesserung von UI/UX und Benutzerfreundlichkeit",
+        "Optimierung der Frontend-Performance",
+      ],
     },
   ],
 };
