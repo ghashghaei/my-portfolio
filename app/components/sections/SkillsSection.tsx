@@ -1,4 +1,5 @@
 import CoreBadge from "../ui/CoreBadge/CoreBadge";
+import CoreTooltip from "../ui/CoreTooltip/CoreTooltip";
 
 const skills = [
   "React",
@@ -16,7 +17,9 @@ export default function SkillsSection() {
       {/* Badges */}
       <div className="flex flex-wrap justify-center gap-3 max-w-2xl">
         {skills.map((skill) => (
-          <CoreBadge key={skill} label={skill} variant="primary" size="md" />
+          <CoreTooltip key={skill} text={skill} position="bottom">
+            <CoreBadge label={skill} variant="primary" size="md" />
+          </CoreTooltip>
         ))}
       </div>
     </div>
