@@ -23,7 +23,7 @@ export const de = {
     {
       id: "company1",
       company: "Six Offene Systeme GmbH",
-      role: "Frontend Entwickler",
+      role: "Frontend Entwicklerin",
       date: "2024 - Aktuell",
       description: "Entwicklung skalierbarer, datengetriebener Webanwendungen.",
       tasks: [
@@ -37,7 +37,7 @@ export const de = {
     {
       id: "company2",
       company: "HEPSTER",
-      role: "Frontend Entwickler",
+      role: "Frontend Entwicklerin",
       date: "2021 - 2023",
       description: "Insurtech-Startup für digitale Versicherungsprodukte.",
       tasks: [
@@ -52,7 +52,7 @@ export const de = {
     {
       id: "company3",
       company: "BELVINI",
-      role: "Frontend Entwickler",
+      role: "Frontend Entwicklerin",
       date: "2020 - 2021",
       description: "E-Commerce-Plattform für Weinhandel.",
       tasks: [
@@ -64,7 +64,7 @@ export const de = {
     {
       id: "company4",
       company: "SON Corporate Group",
-      role: "Frontend Entwickler",
+      role: "Frontend Entwicklerin",
       date: "2017 - 2020",
       description: "Entwicklung interner Webanwendungen.",
       tasks: [
