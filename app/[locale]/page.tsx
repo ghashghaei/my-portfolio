@@ -3,6 +3,7 @@ import { getLocale } from "../lib/getLocale";
 import AboutSection from "../components/sections/AboutSection";
 import SkillsSection from "../components/sections/SkillsSection";
 import ExperienceSection from "../components/sections/ExperienceSection";
+import ShowcaseSection from "../components/sections/ShowcaseSection";
 
 interface PageProps {
   params: Promise<{
@@ -30,6 +31,7 @@ export default async function HomePage({ params }: PageProps) {
           {section.id === "experiences" && (
             <ExperienceSection locale={locale} />
           )}
+          {section.id === "showcase" && <ShowcaseSection />}
         </section>
       ))}
     </div>
