@@ -16,6 +16,25 @@ export default function ShowcaseSection() {
   const [btnSize, setBtnSize] = useState<"sm" | "md" | "lg">("md");
 
   const [iconPosition, setIconPosition] = useState<"left" | "right">("left");
+  const [openId, setOpenId] = useState<string | null>(null);
+
+  const accordionItems = [
+    {
+      id: "1",
+      title: "Frontend Developer",
+      content: "Worked with React, TypeScript and APIs",
+    },
+    {
+      id: "2",
+      title: "UI Engineer",
+      content: "Built reusable components and design systems",
+    },
+    {
+      id: "3",
+      title: "Freelancer",
+      content: "Created modern UI for clients",
+    },
+  ];
 
   return (
     <div className="max-w-3xl mx-auto flex flex-col gap-10">
@@ -98,6 +117,45 @@ export default function ShowcaseSection() {
                 {iconPosition === "right" && <span>*</span>}
               </span>
             </CoreButton>
+          </div>
+        </div>
+        {/* Accordion Demo */}
+        <div className="border p-6 rounded-lg border-slate-700 flex flex-col gap-4">
+          <h3 className="text-xl">Accordion</h3>
+
+          <div className="flex flex-col gap-2">
+            {accordionItems.map((item) => {
+              const isOpen = openId === item.id;
+
+              return (
+                <div key={item.id} className="border rounded-md">
+                  {/* Header */}
+                  <div
+                    className="flex justify-between items-center p-3 cursor-pointer"
+                    onClick={() => setOpenId(isOpen ? null : item.id)}
+                  >
+                    <span>{item.title}</span>
+
+                    <span
+                      className={`transition-transform duration-300 ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    >
+                      ▼
+                    </span>
+                  </div>
+
+                  {/* Content */}
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ${
+                      isOpen ? "max-h-40 p-3" : "max-h-0"
+                    }`}
+                  >
+                    <p className="text-sm text-gray-400">{item.content}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
