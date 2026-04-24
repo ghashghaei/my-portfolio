@@ -7,8 +7,8 @@ export default function AccordionDemo() {
 
   const items = [
     { id: "1", title: "Frontend", content: "React, TS, API" },
-    { id: "2", title: "UI", content: "Design System" },
-    { id: "3", title: "Freelance", content: "Client projects" },
+    { id: "2", title: "UI", content: "Design System, Components" },
+    { id: "3", title: "Freelance", content: "Client projects, Contract work" },
   ];
 
   return (
