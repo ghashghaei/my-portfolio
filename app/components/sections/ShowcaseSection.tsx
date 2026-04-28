@@ -1,21 +1,36 @@
 "use client";
 
+import ShowcaseGroup from "./ShowcaseGroup";
+
 import BadgeDemo from "./BadgeDemo";
 import ButtonDemo from "./ButtonDemo";
 import AccordionDemo from "./AccordionDemo";
+import TooltipDemo from "./TooltipDemo";
+import DropdownDemo from "./DropdownDemo";
 
 export default function ShowcaseSection() {
   return (
-    <div className="max-w-4xl mx-auto flex flex-col gap-10">
+    <div className="max-w-5xl mx-auto flex flex-col gap-12">
       <h2 className="text-3xl text-center text-cyan-400">
-        Components Playground
+        Components Showcase
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      {/* Basic */}
+      <ShowcaseGroup title="Basic">
         <BadgeDemo />
         <ButtonDemo />
+      </ShowcaseGroup>
+
+      {/* Interactive */}
+      <ShowcaseGroup title="Interactive">
         <AccordionDemo />
-      </div>
+        <DropdownDemo />
+      </ShowcaseGroup>
+
+      {/* Feedback */}
+      <ShowcaseGroup title="Feedback">
+        <TooltipDemo />
+      </ShowcaseGroup>
     </div>
   );
 }
