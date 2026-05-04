@@ -25,7 +25,8 @@ export const de = {
       company: "Six Offene Systeme GmbH",
       role: "Frontend Entwicklerin",
       date: "2024 - Aktuell",
-      description: "Entwicklung skalierbarer, datengetriebener Webanwendungen.",
+      description:
+        "Als Frontend Developer habe ich an webbasierten Plattformen für Projektkoordination und digitales Asset-Management gearbeitet. Dabei entwickelte ich Benutzeroberflächen für Dashboards, Aufgabenübersichten sowie Funktionen zur Suche und Filterung von Inhalten und integrierte die Anwendungen über REST-Schnittstellen mit Backend-Services.",
       tasks: [
         "Entwicklung moderner Frontends mit Vue.js",
         "Aufbau wiederverwendbarer komponentenbasierter UI-Architektur",
