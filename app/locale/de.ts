@@ -40,7 +40,8 @@ export const de = {
       company: "HEPSTER",
       role: "Frontend Entwicklerin",
       date: "2021 - 2023",
-      description: "Insurtech-Startup für digitale Versicherungsprodukte.",
+      description:
+        "Softwareentwickler bei HEPSTER mit Fokus auf skalierbare B2C- und B2B-Webanwendungen. Entwickelte wiederverwendbare UI-Komponenten und optimierte Benutzeroberflächen mit Vue, React, Next.js und Java Spring Boot. Zusammenarbeit in agilen Teams, API-Integration und Einhaltung von Clean Code-Prinzipien.",
       tasks: [
         "Entwicklung skalierbarer Frontend-Anwendungen",
         "Aufbau und Pflege eines Design Systems mit Storybook",
