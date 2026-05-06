@@ -56,7 +56,8 @@ export const de = {
       company: "BELVINI",
       role: "Frontend Entwicklerin",
       date: "2020 - 2021",
-      description: "E-Commerce-Plattform für Weinhandel.",
+      description:
+        "Softwareentwickler bei BELViNi, verantwortlich für die Weiterentwicklung der E-Commerce-Plattform. Implementierung eines schnellen, benutzerfreundlichen Gutschein-Systems (Gutschein) und eines One-Click-Bestellprozesses. Fokus auf Frontend- und Backend-Features mit Angular und PHP Laravel, Optimierung von Usability und Performance.",
       tasks: [
         "Entwicklung und Optimierung des E-Commerce-Frontends",
         "Umsetzung responsiver, geräteübergreifender UI",
