@@ -69,7 +69,8 @@ export const de = {
       company: "SON Corporate Group",
       role: "Frontend Entwicklerin",
       date: "2017 - 2020",
-      description: "Entwicklung interner Webanwendungen.",
+      description:
+        "Ich arbeitete als Softwareentwickler bei der Son Corporate Group und war an der Entwicklung von Business-Intelligence-(BI)-Plattformen für Unternehmens- und Regierungsorganisationen beteiligt, darunter das Finanzministerium und die Sozialversicherungsorganisation. Dabei entwickelte ich Webanwendungen mit Angular und dem .NET (C#) Ökosystem, einschließlich einer tabellenkalkulationsähnlichen Anwendung mit einer benutzerdefinierten DSL zur Erstellung von Finanzformularen.",
       tasks: [
         "Entwicklung interner Webanwendungen",
         "Verbesserung von UI/UX und Benutzerfreundlichkeit",
