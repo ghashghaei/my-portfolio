@@ -17,7 +17,7 @@ export const sizes: Record<BadgeSize, string> = {
 
 export const variants: Record<BadgeVariant, string> = {
   primary: "bg-gray-500 text-white",
-  secondary: "bg-gray-200 text-gray-800",
+  secondary: "bg-gray-500 text-gray-800",
   success: "bg-green-500 text-white",
   outline: "border border-gray-400 text-gray-700 bg-transparent",
 };

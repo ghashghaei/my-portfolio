@@ -11,7 +11,7 @@ export const sizes: Record<Size, string> = {
 
 export const variants: Record<Variant, string> = {
   primary: "bg-blue-500 text-white",
-  secondary: "bg-gray-500 text-white",
+  secondary: "bg-gray-800 text-white",
   outline:
     "border border-cyan-400 text-cyan-400 bg-transparent hover:bg-cyan-400 hover:text-black",
   ghost: "text-gray-300 hover:bg-slate-800 hover:text-white",
