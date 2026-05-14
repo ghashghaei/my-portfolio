@@ -40,7 +40,8 @@ export const en = {
       company: "HEPSTER",
       role: "Frontend Engineer",
       date: "2021 - 2023",
-      description: "Insurtech startup focused on digital insurance products.",
+      description:
+        "At HEPSTER, I contributed to the development of scalable B2C and B2B web applications, collaborating with cross-functional teams in an agile environment. My work focused on creating user-friendly interfaces while ensuring high code quality and maintainability across the platform.",
       tasks: [
         "Developed scalable frontend applications",
         "Built and maintained a design system with Storybook",
