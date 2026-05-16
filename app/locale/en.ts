@@ -56,7 +56,8 @@ export const en = {
       company: "BELVINI",
       role: "Frontend Engineer",
       date: "2020 - 2021",
-      description: "E-commerce platform for wine retail.",
+      description:
+        "Contributed to the development and evolution of BELViNi’s e-commerce platform, focusing on improving the ordering experience and implementing scalable web features.",
       tasks: [
         "Developed and optimized e-commerce frontend",
         "Implemented responsive cross-device UI",
