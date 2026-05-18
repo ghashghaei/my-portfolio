@@ -69,7 +69,8 @@ export const en = {
       company: "SON Corporate Group",
       role: "Frontend Developer",
       date: "2017 - 2020",
-      description: "Internal web applications development.",
+      description:
+        "Worked as a software developer contributing to the development of Business Intelligence (BI) platforms for enterprise and government organizations, including the Financial Ministry and the Social Affairs Organization.",
       tasks: [
         "Developed internal web applications",
         "Improved UI/UX and usability",
