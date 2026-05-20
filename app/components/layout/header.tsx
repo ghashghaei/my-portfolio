@@ -5,6 +5,7 @@ import Link from "next/link";
 import CoreSelect from "../ui/CoreSelect/CoreSelect";
 import { NavItem } from "../../config/navigation";
 import { getLocale } from "../../lib/getLocale";
+import { useRouter } from "next/navigation";
 
 interface HeaderProps {
   items: NavItem[];
@@ -15,6 +16,7 @@ export default function Header({ items, locale }: HeaderProps) {
   const lang = getLocale(locale);
   const nextLocale = locale === "en" ? "de" : "en";
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const dropdownItems = items.map((item) => ({
     label: lang.nav[item.id as keyof typeof lang.nav],
@@ -35,9 +37,15 @@ export default function Header({ items, locale }: HeaderProps) {
         </div>
 
         {/* Language Switch */}
-        <Link href={`/${nextLocale}`} className="border px-3 py-1 rounded">
-          {locale.toUpperCase()}
-        </Link>
+        <button
+          onClick={() => {
+            document.cookie = `locale=${nextLocale}; path=/`;
+            router.push(`/${nextLocale}`);
+          }}
+          className="border px-3 py-1 rounded"
+        >
+          {nextLocale.toUpperCase()}
+        </button>
 
         {/* Mobile Menu Button */}
         <button
