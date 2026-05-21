@@ -44,7 +44,7 @@ export default function Header({ items, locale }: HeaderProps) {
           }}
           className="border px-3 py-1 rounded"
         >
-          {nextLocale.toUpperCase()}
+          {locale.toUpperCase()}
         </button>
 
         {/* Mobile Menu Button */}
