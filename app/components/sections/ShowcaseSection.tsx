@@ -8,27 +8,35 @@ import AccordionDemo from "./AccordionDemo";
 import TooltipDemo from "./TooltipDemo";
 import DropdownDemo from "./DropdownDemo";
 
-export default function ShowcaseSection() {
+import { getLocale } from "../../lib/getLocale";
+
+type Props = {
+  locale: string;
+};
+
+export default function ShowcaseSection({ locale }: Props) {
+  const lang = getLocale(locale);
+
   return (
     <div className="max-w-5xl mx-auto flex flex-col gap-12">
       <h2 className="text-3xl text-center text-cyan-400">
-        Components Showcase
+        {lang.showcase.title}
       </h2>
 
       {/* Basic */}
-      <ShowcaseGroup title="Basic">
+      <ShowcaseGroup title={lang.showcase.groups.basic}>
         <BadgeDemo />
         <ButtonDemo />
       </ShowcaseGroup>
 
       {/* Interactive */}
-      <ShowcaseGroup title="Interactive">
+      <ShowcaseGroup title={lang.showcase.groups.interactive}>
         <AccordionDemo />
         <DropdownDemo />
       </ShowcaseGroup>
 
       {/* Feedback */}
-      <ShowcaseGroup title="Feedback">
+      <ShowcaseGroup title={lang.showcase.groups.feedback}>
         <TooltipDemo />
       </ShowcaseGroup>
     </div>

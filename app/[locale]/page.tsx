@@ -31,7 +31,7 @@ export default async function HomePage({ params }: PageProps) {
           {section.id === "experiences" && (
             <ExperienceSection locale={locale} />
           )}
-          {section.id === "showcase" && <ShowcaseSection />}
+          {section.id === "showcase" && <ShowcaseSection locale={locale} />}
         </section>
       ))}
     </div>
