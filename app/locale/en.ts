@@ -19,6 +19,16 @@ export const en = {
     contact: "Contact Me",
   },
 
+  showcase: {
+    title: "Components Showcase",
+
+    groups: {
+      basic: "Basic",
+      interactive: "Interactive",
+      feedback: "Feedback",
+    },
+  },
+
   experience: [
     {
       id: "company1",
