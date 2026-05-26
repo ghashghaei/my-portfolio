@@ -18,14 +18,13 @@ export default async function HomePage({ params }: PageProps) {
   return (
     <div>
       {sections.map((section) => (
-        <section
-          key={section.id}
-          id={section.id}
-          className="min-h-auto flex flex-col mb-24"
-        >
-          <h2 className="text-4xl font-bold mb-6">
-            {lang.sections[section.id as keyof typeof lang.sections]}
-          </h2>
+        <section key={section.id} className="min-h-auto flex flex-col mb-24">
+          <div id={section.id} className="scroll-mt-24">
+            <h2 className="text-4xl font-bold mb-6">
+              {lang.sections[section.id as keyof typeof lang.sections]}
+            </h2>
+          </div>
+
           {section.id === "about" && <AboutSection locale={locale} />}
           {section.id === "skills" && <SkillsSection />}
           {section.id === "experiences" && (
