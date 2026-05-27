@@ -19,10 +19,6 @@ export default function ShowcaseSection({ locale }: Props) {
 
   return (
     <div className="max-w-5xl mx-auto flex flex-col gap-12">
-      <h2 className="text-3xl text-center text-cyan-400">
-        {lang.showcase.title}
-      </h2>
-
       {/* Basic */}
       <ShowcaseGroup title={lang.showcase.groups.basic}>
         <BadgeDemo />

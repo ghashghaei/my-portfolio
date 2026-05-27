@@ -4,13 +4,14 @@ export const de = {
     about: "Über mich",
     skills: "Fähigkeiten",
     experiences: "Erfahrungen",
-    showcase: "Showcase",
+    showcase: "Schaukasten",
   },
 
   sections: {
     about: "Über mich",
     skills: "Fähigkeiten",
     experiences: "Erfahrungen",
+    showcase: "Schaukasten",
   },
 
   about: {

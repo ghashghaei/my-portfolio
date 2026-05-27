@@ -11,6 +11,7 @@ export const en = {
     about: "About",
     skills: "Skills",
     experiences: "Experiences",
+    showcase: "Showcase",
   },
 
   about: {
