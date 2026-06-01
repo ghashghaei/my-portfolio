@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function SurveySection() {
+export default function FeedbackSection() {
   const [selected, setSelected] = useState("");
 
   const submitVote = () => {
