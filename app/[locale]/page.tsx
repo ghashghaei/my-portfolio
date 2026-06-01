@@ -4,6 +4,7 @@ import AboutSection from "../components/sections/AboutSection";
 import SkillsSection from "../components/sections/SkillsSection";
 import ExperienceSection from "../components/sections/ExperienceSection";
 import ShowcaseSection from "../components/sections/ShowcaseSection";
+import SurveySection from "../components/sections/SurveySection";
 
 interface PageProps {
   params: Promise<{
@@ -33,6 +34,7 @@ export default async function HomePage({ params }: PageProps) {
           {section.id === "showcase" && <ShowcaseSection locale={locale} />}
         </section>
       ))}
+      <SurveySection />
     </div>
   );
 }
