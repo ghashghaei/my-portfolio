@@ -32,9 +32,9 @@ export default async function HomePage({ params }: PageProps) {
             <ExperienceSection locale={locale} />
           )}
           {section.id === "showcase" && <ShowcaseSection locale={locale} />}
+          {section.id === "feedback" && <FeedbackSection locale={locale} />}
         </section>
       ))}
-      <FeedbackSection />
     </div>
   );
 }

@@ -5,6 +5,7 @@ export const de = {
     skills: "Fähigkeiten",
     experiences: "Erfahrungen",
     showcase: "Schaukasten",
+    feedback: "Feedback",
   },
 
   sections: {
@@ -12,6 +13,7 @@ export const de = {
     skills: "Fähigkeiten",
     experiences: "Erfahrungen",
     showcase: "Schaukasten",
+    feedback: "Feedback",
   },
 
   about: {
@@ -91,4 +93,10 @@ export const de = {
       ],
     },
   ],
+  feedback: {
+    subtitle: "Bewerten Sie mein Portfolio",
+    submit: "Senden",
+    results: "Ergebnisse",
+    totalVotes: "Gesamtstimmen",
+  },
 };

@@ -12,6 +12,7 @@ export const en = {
     skills: "Skills",
     experiences: "Experiences",
     showcase: "Showcase",
+    feedback: "Feedback",
   },
 
   about: {
@@ -91,4 +92,10 @@ export const en = {
       ],
     },
   ],
+  feedback: {
+    subtitle: "Rate my portfolio",
+    submit: "Submit",
+    results: "Results",
+    totalVotes: "Total votes",
+  },
 };
