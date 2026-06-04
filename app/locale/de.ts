@@ -94,9 +94,11 @@ export const de = {
     },
   ],
   feedback: {
+    title: "Feedback",
     subtitle: "Bewerten Sie mein Portfolio",
     submit: "Senden",
     results: "Ergebnisse",
     totalVotes: "Gesamtstimmen",
+    alreadyVoted: "Sie haben bereits abgestimmt",
   },
 };

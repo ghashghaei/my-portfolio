@@ -93,9 +93,11 @@ export const en = {
     },
   ],
   feedback: {
+    title: "Feedback",
     subtitle: "Rate my portfolio",
     submit: "Submit",
     results: "Results",
     totalVotes: "Total votes",
+    alreadyVoted: "You already voted",
   },
 };
