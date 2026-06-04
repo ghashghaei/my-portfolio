@@ -38,9 +38,11 @@ export default function FeedbackSection({ locale }: Props) {
   const loadVotes = async () => {
     const response = await fetch("/api/survey");
 
-    const data = await response.json();
+    const result = await response.json();
 
-    setStats(data);
+    if (result.success) {
+      setStats(result.data);
+    }
   };
 
   useEffect(() => {
