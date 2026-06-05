@@ -1,21 +1,25 @@
 "use client";
-import { useState } from "react";
 
-export default function CoreRating({ max = 5 }) {
-  const [rating, setRating] = useState(0);
+type Props = {
+  value: number;
+  onChange: (value: number) => void;
+  max?: number;
+};
 
+export default function CoreRating({ value, onChange, max = 5 }: Props) {
   return (
     <div className="flex gap-1">
       {[...Array(max)].map((_, index) => {
-        const value = index + 1;
+        const star = index + 1;
 
         return (
           <button
-            key={value}
-            onClick={() => setRating(value)}
-            className="text-2xl"
+            key={star}
+            type="button"
+            onClick={() => onChange(star)}
+            className="text-3xl"
           >
-            {value <= rating ? "★" : "☆"}
+            {star <= value ? "★" : "☆"}
           </button>
         );
       })}
