@@ -2,18 +2,20 @@ import { NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 
+const filePath = path.join(process.cwd(), "data", "survey.json");
+
 export async function GET() {
   try {
-    const filePath = path.join(process.cwd(), "data", "survey.json");
-
     const file = await fs.readFile(filePath, "utf8");
+
+    const data = JSON.parse(file);
 
     return NextResponse.json({
       success: true,
-      data: JSON.parse(file),
+      data,
     });
   } catch (error) {
-    console.error(error);
+    console.error("GET ERROR:", error);
 
     return NextResponse.json(
       {
@@ -24,17 +26,26 @@ export async function GET() {
     );
   }
 }
+
 export async function POST(req: Request) {
   try {
-    const { rating } = await req.json();
+    const body = await req.json();
 
-    const filePath = path.join(process.cwd(), "data", "survey.json");
+    const rating = String(body.rating);
 
     const file = await fs.readFile(filePath, "utf8");
 
     const data = JSON.parse(file);
 
-    data.votes[rating]++;
+    if (!data.votes) {
+      data.votes = {};
+    }
+
+    if (!(rating in data.votes)) {
+      data.votes[rating] = 0;
+    }
+
+    data.votes[rating] += 1;
 
     await fs.writeFile(filePath, JSON.stringify(data, null, 2), "utf8");
 
@@ -43,7 +54,7 @@ export async function POST(req: Request) {
       data,
     });
   } catch (error) {
-    console.error(error);
+    console.error("POST ERROR:", error);
 
     return NextResponse.json(
       {

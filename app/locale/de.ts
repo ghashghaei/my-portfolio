@@ -100,5 +100,6 @@ export const de = {
     results: "Ergebnisse",
     totalVotes: "Gesamtstimmen",
     alreadyVoted: "Sie haben bereits abgestimmt",
+    averageRating: "Durchschnittliche Bewertung",
   },
 };

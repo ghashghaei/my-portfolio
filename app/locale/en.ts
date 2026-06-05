@@ -99,5 +99,6 @@ export const en = {
     results: "Results",
     totalVotes: "Total votes",
     alreadyVoted: "You already voted",
+    averageRating: "Average Rating",
   },
 };

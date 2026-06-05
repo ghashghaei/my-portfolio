@@ -3,19 +3,14 @@
 import { useEffect, useState } from "react";
 import { getLocale } from "../../lib/getLocale";
 import CoreButton from "../ui/CoreButton/CoreButton";
+import CoreRating from "../ui/CoreRating/CoreRating";
 
 type Props = {
   locale: string;
 };
 
 type VoteData = {
-  votes: {
-    1: number;
-    2: number;
-    3: number;
-    4: number;
-    5: number;
-  };
+  votes: Record<string, number>;
 };
 
 export default function FeedbackSection({ locale }: Props) {
@@ -24,6 +19,7 @@ export default function FeedbackSection({ locale }: Props) {
   const [rating, setRating] = useState(0);
 
   const [voted, setVoted] = useState(false);
+  const RATINGS = [1, 2, 3, 4, 5];
 
   const [stats, setStats] = useState<VoteData>({
     votes: {
@@ -82,6 +78,18 @@ export default function FeedbackSection({ locale }: Props) {
     stats.votes[4] +
     stats.votes[5];
 
+  const averageRating =
+    totalVotes === 0
+      ? 0
+      : (
+          (stats.votes[1] * 1 +
+            stats.votes[2] * 2 +
+            stats.votes[3] * 3 +
+            stats.votes[4] * 4 +
+            stats.votes[5] * 5) /
+          totalVotes
+        ).toFixed(1);
+
   return (
     <div className="max-w-2xl">
       <h2 className="text-3xl font-bold text-cyan-400">
@@ -92,17 +100,7 @@ export default function FeedbackSection({ locale }: Props) {
 
       {!voted && (
         <>
-          <div className="flex gap-2 mt-6">
-            {[1, 2, 3, 4, 5].map((star) => (
-              <button
-                key={star}
-                onClick={() => setRating(star)}
-                className="text-4xl"
-              >
-                {star <= rating ? "★" : "☆"}
-              </button>
-            ))}
-          </div>
+          <CoreRating value={rating} onChange={setRating} />
 
           <div className="mt-6">
             <CoreButton variant="primary" size="md" onClick={submitVote}>
@@ -119,14 +117,17 @@ export default function FeedbackSection({ locale }: Props) {
       <div className="mt-10">
         <h3 className="font-bold text-xl mb-4">{lang.feedback.results}</h3>
 
-        <div>⭐⭐⭐⭐⭐ {stats.votes[5]}</div>
-        <div>⭐⭐⭐⭐ {stats.votes[4]}</div>
-        <div>⭐⭐⭐ {stats.votes[3]}</div>
-        <div>⭐⭐ {stats.votes[2]}</div>
-        <div>⭐ {stats.votes[1]}</div>
+        {[...RATINGS].reverse().map((value) => (
+          <div key={value}>
+            {"⭐".repeat(value)} {stats.votes[value] || 0}
+          </div>
+        ))}
 
         <div className="mt-4 font-semibold">
           {lang.feedback.totalVotes}: {totalVotes}
+        </div>
+        <div className="mt-2 font-semibold">
+          {lang.feedback.averageRating}: {averageRating}
         </div>
       </div>
     </div>
