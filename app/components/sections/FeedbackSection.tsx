@@ -42,13 +42,21 @@ export default function FeedbackSection({ locale }: Props) {
   };
 
   useEffect(() => {
-    loadVotes();
+    const initialize = async () => {
+      const response = await fetch("/api/survey");
 
-    const cookie = document.cookie.includes("feedback-voted=true");
+      const result = await response.json();
 
-    if (cookie) {
-      setVoted(true);
-    }
+      if (result.success) {
+        setStats(result.data);
+      }
+
+      const cookie = document.cookie.includes("feedback-voted=true");
+
+      setVoted(cookie);
+    };
+
+    initialize();
   }, []);
 
   const submitVote = async () => {
