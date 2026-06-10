@@ -22,6 +22,7 @@ export const de = {
     description:
       "Frontend Entwickler mit über 5 Jahren Erfahrung in der Entwicklung skalierbarer und performanter Webanwendungen. Erfahrung mit React, Vue.js und TypeScript sowie starkem Fokus auf komponentenbasierte Architektur, REST-API-Integration und responsives Design. Nachweisbare Verbesserungen in Performance, Barrierefreiheit (WCAG) und User Experience in Insurtech- und E-Commerce-Projekten.",
     contact: "Kontakt",
+    download: "Lebenslauf herunterladen",
   },
 
   showcase: {

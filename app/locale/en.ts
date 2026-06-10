@@ -21,6 +21,7 @@ export const en = {
     description:
       "Frontend Developer with 5+ years of experience building scalable and high-performance web applications. Skilled in React, Vue.js, and TypeScript with a strong focus on component-based architecture, REST API integration, and responsive design. Proven track record of improving performance, accessibility (WCAG), and user experience across insurtech and e-commerce platforms.",
     contact: "Contact Me",
+    download: "Download CV",
   },
 
   showcase: {

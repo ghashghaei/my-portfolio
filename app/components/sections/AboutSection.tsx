@@ -10,6 +10,7 @@ type Props = {
 
 export default function AboutSection({ locale }: Props) {
   const lang = getLocale(locale);
+  const cvFile = locale === "de" ? "/cv-de.pdf" : "/cv-en.pdf";
   const contactContent = (
     <div className="flex flex-col gap-2 text-sm">
       {contactItems.map((item) => (
@@ -48,12 +49,18 @@ export default function AboutSection({ locale }: Props) {
           {lang.about.description}
         </p>
 
-        <div className="mt-6">
+        <div className="mt-6 flex flex-wrap gap-4 justify-center md:justify-start">
           <CoreTooltip text={contactContent}>
             <CoreButton variant="primary" size="md">
               {lang.about.contact}
             </CoreButton>
           </CoreTooltip>
+
+          <a href={cvFile} download target="_blank" rel="noopener noreferrer">
+            <CoreButton variant="secondary" size="md">
+              {lang.about.download}
+            </CoreButton>
+          </a>
         </div>
       </div>
     </div>
