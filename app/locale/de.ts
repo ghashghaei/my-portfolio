@@ -44,7 +44,7 @@ export const de = {
       description:
         "Als Frontend Developer habe ich an webbasierten Plattformen für Projektkoordination und digitales Asset-Management gearbeitet. Dabei entwickelte ich Benutzeroberflächen für Dashboards, Aufgabenübersichten sowie Funktionen zur Suche und Filterung von Inhalten und integrierte die Anwendungen über REST-Schnittstellen mit Backend-Services.",
       tasks: [
-        "Entwicklung moderner Frontends mit Vue.js",
+        "Entwicklung moderner Frontends mit React, TypeScript und Tailwind CSS",
         "Aufbau wiederverwendbarer komponentenbasierter UI-Architektur",
         "Integration von REST APIs in Frontend-Systeme",
         "Zusammenarbeit mit Backend- und Design-Teams",
