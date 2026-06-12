@@ -43,7 +43,7 @@ export const en = {
       description:
         "At SIX Offene Systeme, I worked on several web-based platforms focused on digital asset management and team collaboration. The systems were designed to help organizations manage large collections of digital content, coordinate project activities, and provide teams with centralized access to resources and workflows through modern web interfaces.My work focused on building and improving user-facing features for these platforms and ensuring smooth integration between the frontend applications and backend services.",
       tasks: [
-        "Developed modern frontends using Vue.js",
+        "Developed modern frontends using React, TypeScript, and Tailwind CSS",
         "Built reusable component-based UI architecture",
         "Integrated REST APIs into frontend systems",
         "Collaborated with backend and design teams",
