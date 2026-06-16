@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { getLocale } from "../../lib/getLocale";
 import CoreButton from "../ui/CoreButton/CoreButton";
 import CoreRating from "../ui/CoreRating/CoreRating";
@@ -17,8 +18,10 @@ export default function FeedbackSection({ locale }: Props) {
   const lang = getLocale(locale);
 
   const [rating, setRating] = useState(0);
+  const [message, setMessage] = useState("");
 
   const [voted, setVoted] = useState(false);
+
   const RATINGS = [1, 2, 3, 4, 5];
 
   const [stats, setStats] = useState<VoteData>({
@@ -51,9 +54,9 @@ export default function FeedbackSection({ locale }: Props) {
         setStats(result.data);
       }
 
-      const cookie = document.cookie.includes("feedback-voted=true");
+      /*const cookie = document.cookie.includes("feedback-voted=true");
 
-      setVoted(cookie);
+      setVoted(cookie);*/
     };
 
     initialize();
@@ -69,6 +72,7 @@ export default function FeedbackSection({ locale }: Props) {
       },
       body: JSON.stringify({
         rating,
+        message,
       }),
     });
 
@@ -110,6 +114,13 @@ export default function FeedbackSection({ locale }: Props) {
         <>
           <CoreRating value={rating} onChange={setRating} />
 
+          <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Write your opinion..."
+            className="w-full mt-6 p-4 rounded-xl bg-gray-900 border border-gray-700 outline-none resize-none min-h-[120px]"
+          />
+
           <div className="mt-6">
             <CoreButton variant="primary" size="md" onClick={submitVote}>
               {lang.feedback.submit}
@@ -134,9 +145,17 @@ export default function FeedbackSection({ locale }: Props) {
         <div className="mt-4 font-semibold">
           {lang.feedback.totalVotes}: {totalVotes}
         </div>
+
         <div className="mt-2 font-semibold">
           {lang.feedback.averageRating}: {averageRating}
         </div>
+
+        <Link
+          href={`/${locale}/comments`}
+          className="inline-block mt-6 text-cyan-400 hover:text-cyan-300 transition"
+        >
+          View Comments →
+        </Link>
       </div>
     </div>
   );

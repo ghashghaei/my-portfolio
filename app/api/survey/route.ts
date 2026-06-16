@@ -32,6 +32,7 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const rating = String(body.rating);
+    const message = body.message || "";
 
     const file = await fs.readFile(filePath, "utf8");
 
@@ -46,6 +47,18 @@ export async function POST(req: Request) {
     }
 
     data.votes[rating] += 1;
+
+    if (!data.comments) {
+      data.comments = [];
+    }
+
+    if (message.trim()) {
+      data.comments.push({
+        rating: Number(rating),
+        message: message.trim(),
+        createdAt: new Date().toISOString(),
+      });
+    }
 
     await fs.writeFile(filePath, JSON.stringify(data, null, 2), "utf8");
 
