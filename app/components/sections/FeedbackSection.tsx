@@ -54,9 +54,9 @@ export default function FeedbackSection({ locale }: Props) {
         setStats(result.data);
       }
 
-      /*const cookie = document.cookie.includes("feedback-voted=true");
+      const cookie = document.cookie.includes("feedback-voted=true");
 
-      setVoted(cookie);*/
+      setVoted(cookie);
     };
 
     initialize();
