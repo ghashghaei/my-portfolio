@@ -102,4 +102,9 @@ export const en = {
     alreadyVoted: "You already voted",
     averageRating: "Average Rating",
   },
+  comments: {
+    title: "User Comments",
+    empty: "No comments yet.",
+    backToHome: "Back to Home",
+  },
 };

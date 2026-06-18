@@ -103,4 +103,9 @@ export const de = {
     alreadyVoted: "Sie haben bereits abgestimmt",
     averageRating: "Durchschnittliche Bewertung",
   },
+  comments: {
+    title: "Benutzerkommentare",
+    empty: "Noch keine Kommentare vorhanden.",
+    backToHome: "Zurück zur Startseite",
+  },
 };

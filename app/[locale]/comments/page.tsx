@@ -1,6 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import Link from "next/link";
+import { getLocale } from "@/app/lib/getLocale";
 
 type Comment = {
   rating: number;
@@ -16,6 +17,8 @@ export default async function CommentsPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+
+  const lang = getLocale(locale);
 
   let comments: Comment[] = [];
 
@@ -35,14 +38,14 @@ export default async function CommentsPage({
         href={`/${locale}`}
         className="inline-flex items-center mb-8 text-cyan-400 hover:text-cyan-300 transition"
       >
-        ← Back to Home
+        ← {lang.comments.backToHome}
       </Link>
 
-      <h1 className="text-4xl font-bold text-cyan-400 mb-10">User Comments</h1>
+      <h1>{lang.comments.title}</h1>
 
       {comments.length === 0 ? (
         <div className="rounded-2xl border border-gray-800 p-6">
-          <p className="text-gray-400">No comments yet.</p>
+          <p>{lang.comments.empty}</p>
         </div>
       ) : (
         comments
