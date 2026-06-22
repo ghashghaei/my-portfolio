@@ -106,5 +106,6 @@ export const en = {
     title: "User Comments",
     empty: "No comments yet.",
     backToHome: "Back to Home",
+    commentPage: "View Comments",
   },
 };
