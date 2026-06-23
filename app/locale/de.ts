@@ -107,6 +107,6 @@ export const de = {
     title: "Benutzerkommentare",
     empty: "Noch keine Kommentare vorhanden.",
     backToHome: "Zurück zur Startseite",
-    commentPage: "Kommentare anzeigen",
+    toCommentPage: "Kommentare anzeigen",
   },
 };

@@ -19,7 +19,6 @@ export default function FeedbackSection({ locale }: Props) {
 
   const [rating, setRating] = useState(0);
   const [message, setMessage] = useState("");
-
   const [voted, setVoted] = useState(false);
 
   const RATINGS = [1, 2, 3, 4, 5];
@@ -36,7 +35,6 @@ export default function FeedbackSection({ locale }: Props) {
 
   const loadVotes = async () => {
     const response = await fetch("/api/survey");
-
     const result = await response.json();
 
     if (result.success) {
@@ -47,7 +45,6 @@ export default function FeedbackSection({ locale }: Props) {
   useEffect(() => {
     const initialize = async () => {
       const response = await fetch("/api/survey");
-
       const result = await response.json();
 
       if (result.success) {
@@ -55,7 +52,6 @@ export default function FeedbackSection({ locale }: Props) {
       }
 
       const cookie = document.cookie.includes("feedback-voted=true");
-
       setVoted(cookie);
     };
 
@@ -79,7 +75,6 @@ export default function FeedbackSection({ locale }: Props) {
     document.cookie = "feedback-voted=true; max-age=31536000; path=/";
 
     setVoted(true);
-
     loadVotes();
   };
 
@@ -103,15 +98,11 @@ export default function FeedbackSection({ locale }: Props) {
         ).toFixed(1);
 
   return (
-    <div className="max-w-2xl">
-      <h2 className="text-3xl font-bold text-cyan-400">
-        {lang.feedback.title}
-      </h2>
-
-      <p className="mt-4 text-gray-400">{lang.feedback.subtitle}</p>
+    <div className="w-full max-w-2xl mx-auto mt-6 px-4 flex flex-col items-center">
+      <p className="mt-4 text-center text-gray-400">{lang.feedback.subtitle}</p>
 
       {!voted && (
-        <>
+        <div className="w-full flex flex-col items-center mt-6">
           <CoreRating value={rating} onChange={setRating} />
 
           <textarea
@@ -126,36 +117,50 @@ export default function FeedbackSection({ locale }: Props) {
               {lang.feedback.submit}
             </CoreButton>
           </div>
-        </>
+        </div>
       )}
 
       {voted && (
-        <p className="mt-6 text-green-400">{lang.feedback.alreadyVoted}</p>
+        <p className="mt-6 text-center text-green-400">
+          {lang.feedback.alreadyVoted}
+        </p>
       )}
 
-      <div className="mt-10">
-        <h3 className="font-bold text-xl mb-4">{lang.feedback.results}</h3>
+      <div className="w-full mt-12">
+        <h3 className="mb-6 text-center text-xl font-bold">
+          {lang.feedback.results}
+        </h3>
 
-        {[...RATINGS].reverse().map((value) => (
-          <div key={value}>
-            {"⭐".repeat(value)} {stats.votes[value] || 0}
+        <div className="space-y-3">
+          {[...RATINGS].reverse().map((value) => (
+            <div
+              key={value}
+              className="flex items-center justify-between rounded-lg border border-gray-800 px-4 py-3"
+            >
+              <span>{"⭐".repeat(value)}</span>
+              <span className="font-medium">{stats.votes[value] || 0}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-6 flex flex-col items-center gap-2 font-semibold">
+          <div>
+            {lang.feedback.totalVotes}: {totalVotes}
           </div>
-        ))}
 
-        <div className="mt-4 font-semibold">
-          {lang.feedback.totalVotes}: {totalVotes}
+          <div>
+            {lang.feedback.averageRating}: {averageRating}
+          </div>
         </div>
 
-        <div className="mt-2 font-semibold">
-          {lang.feedback.averageRating}: {averageRating}
+        <div className="mt-6 text-center">
+          <Link
+            href={`/${locale}/comments`}
+            className="inline-block text-cyan-400 transition hover:text-cyan-300"
+          >
+            {lang.comments.toCommentPage} →
+          </Link>
         </div>
-
-        <Link
-          href={`/${locale}/comments`}
-          className="inline-block mt-6 text-cyan-400 hover:text-cyan-300 transition"
-        >
-          {lang.comments.commentPage} →
-        </Link>
       </div>
     </div>
   );
