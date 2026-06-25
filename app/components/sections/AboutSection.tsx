@@ -27,7 +27,7 @@ export default function AboutSection({ locale }: Props) {
   );
 
   return (
-    <div className="flex flex-col md:flex-row items-center gap-10">
+    <div className="flex flex-col md:flex-row items-center justify-center gap-10">
       {/* Image */}
       <div className="w-40 h-40 relative">
         <Image
