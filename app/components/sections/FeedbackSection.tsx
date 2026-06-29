@@ -158,7 +158,7 @@ export default function FeedbackSection({ locale }: Props) {
             href={`/${locale}/comments`}
             className="inline-block text-cyan-400 transition hover:text-cyan-300"
           >
-            {lang.comments.toCommentPage} →
+            {lang.comments.goToCommentPage} →
           </Link>
         </div>
       </div>
