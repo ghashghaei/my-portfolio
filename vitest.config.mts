@@ -10,8 +10,18 @@ export default defineConfig({
     globals: true,
     include: ["**/*.test.{ts,tsx}"],
     exclude: ["node_modules", ".next", "e2e"],
-    pool: "threads",
+    pool: "forks",
     css: false,
+    server: {
+      deps: {
+        inline: [
+          "@asamuzakjp/css-color",
+          "@csstools/css-calc",
+          "@csstools/css-color-parser",
+          "cssstyle",
+        ],
+      },
+    },
   },
   resolve: {
     alias: {
