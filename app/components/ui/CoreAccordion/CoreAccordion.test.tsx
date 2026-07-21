@@ -79,7 +79,6 @@ describe("CoreAccordion", () => {
       </CoreAccordion>,
     );
 
-    expect(container.firstChild).toHaveClass;
     expect(container.querySelector("div")?.className).toBeTruthy();
   });
 });
