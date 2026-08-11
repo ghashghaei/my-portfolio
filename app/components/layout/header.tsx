@@ -50,6 +50,8 @@ export default function Header({ items, locale }: HeaderProps) {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isOpen}
           className="md:hidden text-2xl"
         >
           ☰
