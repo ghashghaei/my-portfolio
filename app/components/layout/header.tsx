@@ -42,6 +42,7 @@ export default function Header({ items, locale }: HeaderProps) {
             document.cookie = `locale=${nextLocale}; path=/`;
             router.push(`/${nextLocale}`);
           }}
+          aria-label={`Switch language to ${nextLocale.toUpperCase()}`}
           className="border px-3 py-1 rounded"
         >
           {locale.toUpperCase()}
